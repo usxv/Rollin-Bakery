@@ -428,7 +428,7 @@ f<!DOCTYPE html>
                 const itemHTML = `
                     <div class="summary-row">
                         <span>${item.name} x ${item.quantity}</span>
-                        <span>$${itemTotal.toFixed(2)}</span>
+                        <span>₹${itemTotal.toFixed(2)}</span>
                     </div>
                 `;
                 orderItemsContainer.innerHTML += itemHTML;
@@ -438,9 +438,9 @@ f<!DOCTYPE html>
             const tax = subtotal * 0.10;
             const total = subtotal + tax;
 
-            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
-            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
-            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+            document.getElementById('subtotal').textContent = `₹${subtotal.toFixed(2)}`;
+            document.getElementById('tax').textContent = `₹${tax.toFixed(2)}`;
+            document.getElementById('total').textContent = `₹${total.toFixed(2)}`;
         }
 
         // Update Cart Count

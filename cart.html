@@ -558,7 +558,7 @@
                         <div class="cart-item-info">
                             <h3>${item.name}</h3>
                             <p>${item.description || ''}</p>
-                            <div class="cart-item-price">$${item.price.toFixed(2)} x ${item.quantity}</div>
+                            <div class="cart-item-price">₹${item.price.toFixed(2)} x ${item.quantity}</div>
                             <div class="cart-item-quantity">
                                 <button class="qty-btn" onclick="updateQuantity(${index}, -1)">-</button>
                                 <span class="qty-value">${item.quantity}</span>
@@ -575,9 +575,9 @@
             const tax = subtotal * 0.10;
             const total = subtotal + tax;
 
-            document.getElementById('subtotal').textContent = `$${subtotal.toFixed(2)}`;
-            document.getElementById('tax').textContent = `$${tax.toFixed(2)}`;
-            document.getElementById('total').textContent = `$${total.toFixed(2)}`;
+            document.getElementById('subtotal').textContent = `₹${subtotal.toFixed(2)}`;
+            document.getElementById('tax').textContent = `₹${tax.toFixed(2)}`;
+            document.getElementById('total').textContent = `₹${total.toFixed(2)}`;
         }
 
         // Update Quantity
@@ -674,7 +674,7 @@
                 const billItemHTML = `
                     <div class="bill-item">
                         <span>${item.name} x ${item.quantity}</span>
-                        <span>$${itemTotal.toFixed(2)}</span>
+                        <span>₹${itemTotal.toFixed(2)}</span>
                     </div>
                 `;
                 billItemsContainer.innerHTML += billItemHTML;
@@ -684,7 +684,7 @@
             const tax = subtotal * 0.10;
             const total = subtotal + tax;
 
-            billTotal.textContent = `$${total.toFixed(2)}`;
+            billTotal.textContent = `₹${total.toFixed(2)}`;
 
             // Show Modal
             billModal.classList.add('active');
